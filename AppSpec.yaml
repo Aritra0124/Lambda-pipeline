@@ -6,7 +6,4 @@ Resources:
         Name: "pipeline-lambda-function"
         Alias: "Lambda_Alias"
         CurrentVersion: "1"
-        TargetVersion: "2"
-Hooks:
-  - BeforeAllowTraffic: "LambdaFunctionToValidateBeforeTrafficShift"
-  - AfterAllowTraffic: "LambdaFunctionToValidateAfterTrafficShift"
+        TargetVersion: "1"
