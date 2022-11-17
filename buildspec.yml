@@ -8,17 +8,17 @@ phases:
       - echo install
   pre_build:
     commands:
-       - echo install
-       - python3 test.py
+       - echo pre_build
+       #- python3 test.py
   build:
     commands:
-       - echo install
+       - echo build
        #- ls -la
        #- zip ${LAMBDA_CODE_ZIP_FILE_NAME} test.py
   post_build:
     commands:
-       - echo install
+       - echo post_build
        #- aws lambda update-function-code --function-name  ${LAMBDA_FUNCTION_NAME} --zip-file fileb://${LAMBDA_CODE_ZIP_FILE_NAME} --region ${LAMBDA_REGION}
-artifacts:
-  files:
-    - '**/*'
+#artifacts:
+  #files:
+   # - '**/*'
