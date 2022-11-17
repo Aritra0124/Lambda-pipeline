@@ -4,13 +4,21 @@ phases:
   install:
     runtime-versions:
       python: 3.8
+    commands:
+      - echo install
   pre_build:
     commands:
+       - echo install
        - python3 test.py
   build:
     commands:
-       - ls -la
-       - zip ${LAMBDA_CODE_ZIP_FILE_NAME} test.py
+       - echo install
+       #- ls -la
+       #- zip ${LAMBDA_CODE_ZIP_FILE_NAME} test.py
   post_build:
     commands:
+       - echo install
        #- aws lambda update-function-code --function-name  ${LAMBDA_FUNCTION_NAME} --zip-file fileb://${LAMBDA_CODE_ZIP_FILE_NAME} --region ${LAMBDA_REGION}
+artifacts:
+  files:
+    - '**/*'
